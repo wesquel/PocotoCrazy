@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pocoto.pocotocrazy.HelloController">
+    <children>
+      <VBox fx:id="metaVbox" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" prefWidth="400.0" text="Conecta-se a Metamask">
+               <VBox.margin>
+                  <Insets top="60.0" />
+               </VBox.margin>
+            </Label>
+            <PasswordField fx:id="metaMaskPasswordInput" prefHeight="25.0" prefWidth="351.0">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="10.0" />
+               </VBox.margin>
+            </PasswordField>
+            <Button mnemonicParsing="false" onAction="#startConnectMeta" text="Conectar">
+               <VBox.margin>
+                  <Insets left="168.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Label fx:id="labelMeta" alignment="CENTER" prefWidth="400.0" text="Conecta-se a Metamask" visible="false">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <ProgressBar fx:id="progressBarConectMetamask" prefHeight="18.0" prefWidth="360.0" progress="0.0" visible="false">
+               <VBox.margin>
+                  <Insets left="20.0" top="20.0" />
+               </VBox.margin>
+            </ProgressBar>
+         </children>
+      </VBox>
+        <VBox fx:id="botVbox" prefHeight="250.0" prefWidth="400.0" visible="false">
+            <children>
+                <Separator prefWidth="200.0">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Separator>
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="398.0" text="Pocotó Crazy v0.0.1" textAlignment="CENTER" textOverrun="CLIP">
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </Label>
+                <Separator prefWidth="200.0" />
+                <Label alignment="CENTER" prefHeight="17.0" prefWidth="400.0" text="Alugar Cavalo">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Label>
+                <ProgressBar fx:id="progressBarHint" prefWidth="200.0" progress="0.0">
+                    <VBox.margin>
+                        <Insets left="100.0" top="5.0" />
+                    </VBox.margin>
+                </ProgressBar>
+                <HBox prefHeight="33.0" prefWidth="387.0">
+                    <children>
+                        <Button fx:id="startRintButton" mnemonicParsing="false" onAction="#startHint" prefHeight="25.0" prefWidth="65.0" text="Iniciar">
+                            <HBox.margin>
+                                <Insets left="125.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="cancelHintButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#cancelHint" prefHeight="25.0" prefWidth="65.0" text="Cancelar">
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </HBox>
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="17.0" prefWidth="400.0" text="Correr" />
+                <ProgressBar fx:id="progressBarRun" layoutX="10.0" layoutY="27.0" prefWidth="200.0" progress="0.0">
+                    <VBox.margin>
+                        <Insets left="100.0" top="5.0" />
+                    </VBox.margin></ProgressBar>
+                <HBox layoutX="10.0" layoutY="45.0" prefHeight="33.0" prefWidth="387.0">
+                    <children>
+                        <Button fx:id="startRunButton" mnemonicParsing="false" onAction="#startRun" prefHeight="25.0" prefWidth="65.0" text="Iniciar">
+                            <HBox.margin>
+                                <Insets left="125.0" />
+                            </HBox.margin></Button>
+                        <Button fx:id="cancelRunButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#cancelRun" prefHeight="25.0" prefWidth="65.0" text="Cancelar">
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin></Button>
+                    </children>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </HBox>
+                <Separator prefWidth="200.0" />
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
