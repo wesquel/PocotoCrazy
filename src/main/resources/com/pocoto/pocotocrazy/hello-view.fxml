@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pocoto.pocotocrazy.HelloController">
+    <children>
+      <VBox fx:id="metaVbox" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" prefWidth="400.0" text="Iniciar Navegador">
+               <VBox.margin>
+                  <Insets right="5.0" top="100.0" />
+               </VBox.margin>
+            </Label>
+            <ToggleButton mnemonicParsing="false" onAction="#startRun" prefWidth="100.0" text="Iniciar">
+               <VBox.margin>
+                  <Insets left="150.0" top="10.0" />
+               </VBox.margin>
+            </ToggleButton>
+            <ProgressBar fx:id="progressBarStart" prefWidth="200.0" progress="0.0" visible="false">
+               <VBox.margin>
+                  <Insets left="100.0" top="10.0" />
+               </VBox.margin>
+            </ProgressBar>
+         </children>
+      </VBox>
+        <VBox fx:id="botVbox" prefHeight="250.0" prefWidth="400.0" visible="false">
+            <children>
+                <Separator prefWidth="200.0">
+                    <VBox.margin>
+                        <Insets top="5.0" />
+                    </VBox.margin>
+                </Separator>
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="400.0" text="Pocotó Crazy v1.0.1" textAlignment="CENTER" textOverrun="CLIP">
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </Label>
+                <Separator prefWidth="200.0" />
+                <Label alignment="CENTER" prefHeight="17.0" prefWidth="400.0" text="Alugar Cavalo">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Label>
+                <ProgressBar fx:id="progressBarHorse" layoutX="10.0" layoutY="27.0" prefWidth="200.0" progress="0.0">
+                    <VBox.margin>
+                        <Insets left="100.0" top="5.0" />
+                    </VBox.margin></ProgressBar>
+                <HBox layoutX="10.0" layoutY="45.0" prefHeight="33.0" prefWidth="387.0">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+               <children>
+                  <ToggleButton mnemonicParsing="false" onAction="#startHintHorse" prefWidth="100.0" text="Iniciar">
+                     <HBox.margin>
+                        <Insets left="150.0" />
+                     </HBox.margin>
+                  </ToggleButton>
+               </children>
+                </HBox>
+                <Separator prefWidth="200.0" />
+            <Label alignment="CENTER" prefWidth="400.0" text="Configurações">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+            <Separator prefWidth="200.0" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="100.0" prefWidth="155.0">
+                     <children>
+                        <CheckBox mnemonicParsing="false" text="Infinito">
+                           <VBox.margin>
+                              <Insets left="5.0" top="3.0" />
+                           </VBox.margin>
+                        </CheckBox>
+                        <CheckBox mnemonicParsing="false" text="Captchar Automatico">
+                           <VBox.margin>
+                              <Insets left="5.0" top="2.0" />
+                           </VBox.margin>
+                        </CheckBox>
+                        <CheckBox mnemonicParsing="false" text="Captchar Automatico">
+                           <VBox.margin>
+                              <Insets left="5.0" top="2.0" />
+                           </VBox.margin>
+                        </CheckBox>
+                     </children>
+                  </VBox>
+                  <Separator orientation="VERTICAL" prefHeight="200.0">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Separator>
+                  <VBox prefHeight="100.0" prefWidth="240.0">
+                     <children>
+                        <HBox prefHeight="28.0" prefWidth="198.0">
+                           <children>
+                              <Label text="MAX GAS">
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField prefHeight="25.0" prefWidth="165.0">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="3.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="28.0" prefWidth="198.0">
+                           <children>
+                              <Label text="LMT GAS">
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField prefHeight="25.0" prefWidth="165.0">
+                                 <HBox.margin>
+                                    <Insets left="13.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="39.0" prefWidth="240.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
